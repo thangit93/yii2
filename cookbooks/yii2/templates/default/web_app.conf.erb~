@@ -1,0 +1,9 @@
+<VirtualHost *:80>
+  DocumentRoot /mnt/fukuriko/public_html
+  <Directory /mnt/fukuriko>
+    Options FollowSymLinks Indexes
+    AllowOverride all
+    EnableMMAP Off 
+    EnableSendfile Off
+  </Directory>
+</VirtualHost>
