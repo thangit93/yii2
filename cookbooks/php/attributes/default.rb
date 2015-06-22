@@ -44,7 +44,7 @@ when 'rhel', 'fedora'
   if node['platform_version'].to_f < 6
     default['php']['packages'] = %w{ php53 php53-devel php53-cli php-pear }
   else
-    default['php']['packages'] = %w{ php php-devel php-cli php-pear php-mbstring php-mysql php-pecl-xdebug}
+    default['php']['packages'] = %w{ php54 php54-devel php54-cli php54-pear php54-mbstring php54-mysql php54-pecl-xdebug}
   end
 when 'debian'
   default['php']['conf_dir']      = '/etc/php5/cli'
