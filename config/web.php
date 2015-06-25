@@ -45,11 +45,15 @@ $config = [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
         ],
-        /*
         'assetManager' => [
-            'bundles' => false,
+            'converter' => [
+                'class' => 'yii\web\AssetConverter',
+                'commands' => [
+                    'less' => ['css', 'lessc {from} {to} --no-color'],
+                    'ts' => ['js', 'tsc --out {to} {from}'],
+                ],
+            ],
         ],
-        */
     ],
     'as beforeRequest' => [
         'class' => 'yii\filters\AccessControl',

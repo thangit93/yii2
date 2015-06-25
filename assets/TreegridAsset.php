@@ -3,13 +3,13 @@ namespace app\assets;
 
 use yii\web\AssetBundle;
 
-class Treegrid extends AssetBundle
+class TreegridAsset extends AssetBundle
 {
-    public $sourcePath = '@bower/jquery-trrgrid';
+    public $sourcePath = '@bower/jquery-treegrid';
     public $css = [
-        'morris.css',
+        'css/jquery.treegrid.css',
     ];
     public $js = [
-        'morris.min.js',
+        'js/jquery.treegrid.min.js',
     ];
 }

@@ -24,14 +24,17 @@ class AppAsset extends AssetBundle
     ];
     public $js = [
         'js/morris-data.js',
-        'js/sb-admin-2.js'
+        'js/sb-admin-2.js',
+        'js/site.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',
-        'yii\bootstrap\BootstrapAsset',
+        //'yii\bootstrap\BootstrapAsset',
+        'app\assets\BootstrapAsset',
         'app\assets\FontAwesomeAsset',
-        'app\assets\MetisMenuAsset',
         'app\assets\MorrisAsset',
-        'app\assets\RaphaelAsset'
+        'app\assets\RaphaelAsset',
+        'app\assets\MetisMenuAsset',
+        'app\assets\TreegridAsset',
     ];
 }
