@@ -45,6 +45,9 @@ $config = [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
         ],
+        'assetManager' => [
+            'bundles' => false,
+        ],
     ],
     'as beforeRequest' => [
         'class' => 'yii\filters\AccessControl',
