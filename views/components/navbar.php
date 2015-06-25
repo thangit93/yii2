@@ -247,15 +247,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="#"><i class="fa fa-edit fa-fw"></i> ワークフロー管理<span class="fa arrow"></span></a>
-                    <ul class="nav nav-second-level">
-                        <li>
-                            <a href="/workflow/create">新規登録</a>
-                        </li>
-                        <li>
-                            <a href="/workflow/index">一覧</a>
-                        </li>
-                    </ul>
+                    <a href="/workflow/index"><i class="fa fa-code-fork fa-fw"></i> ワークフロー管理</a>
                 </li>
                 <li>
                     <a href="/task/index"><i class="fa fa-tasks fa-fw"></i> タスク一覧</a>

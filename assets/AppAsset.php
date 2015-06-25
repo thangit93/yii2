@@ -19,23 +19,19 @@ class AppAsset extends AssetBundle
     public $baseUrl = '@web';
     public $css = [
         'css/site.css',
-        'vendor/bower/metisMenu/dist/metisMenu.min.css',
         'css/timeline.css',
-        'css/sb-admin-2.css',
-        'vendor/bower/morrisjs/morris.css',
-        'vendor/bower/font-awesome/css/font-awesome.min.css',
+        'css/sb-admin-2.css'
     ];
     public $js = [
-        //'vendor/bower/jquery/dist/jquery.min.js',
-        'vendor/bower/bootstrap/dist/js/bootstrap.min.js',
-        'vendor/bower/metisMenu/dist/metisMenu.min.js',
-        'vendor/bower/raphael/raphael-min.js',
-        'vendor/bower/morrisjs/morris.min.js',
         'js/morris-data.js',
         'js/sb-admin-2.js'
     ];
     public $depends = [
         'yii\web\YiiAsset',
         'yii\bootstrap\BootstrapAsset',
+        'app\assets\FontAwesomeAsset',
+        'app\assets\MetisMenuAsset',
+        'app\assets\MorrisAsset',
+        'app\assets\RaphaelAsset'
     ];
 }
