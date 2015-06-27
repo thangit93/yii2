@@ -35,6 +35,5 @@ class AppAsset extends AssetBundle
         'app\assets\MorrisAsset',
         'app\assets\RaphaelAsset',
         'app\assets\MetisMenuAsset',
-        'app\assets\TreegridAsset',
     ];
 }

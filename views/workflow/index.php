@@ -1,7 +1,9 @@
 <?php
 
 use yii\helpers\Html;
+use app\widgets\EditableTreeGridView;
 use yii\grid\GridView;
+use yii\base\Widget;
 
 /* @var $this yii\web\View */
 /* @var $searchModel app\models\WorkflowSearch */
@@ -34,67 +36,76 @@ $this->title = 'Workflows';
                 <!-- /.panel-heading -->
                 <div class="panel-body">
                     <div class="table-responsive">
+                        <?= EditableTreeGridView::widget([
+                            'dataProvider' => $dataProvider,
+                            'columns' => [
+                                'name',
+                                'regist_date',
+                                'update_date',
+                                ['class' => 'app\widgets\EditableTreeGridActionColumn'],
+                            ],
+                        ]); ?>
+
                         <table class="table table-hover tree">
                             <thead>
                             <tr>
-                                <th>タイトル</th>
-                                <th>予定工数</th>
-                                <th>操作</th>
+                                <th width="50%">タイトル</th>
+                                <th width="40%">予定工数</th>
+                                <th width="10%"></th>
                             </tr>
                             </thead>
                             <tbody>
                             <tr class="treegrid-1">
-                                <td>1</td>
+                                <td>
+                                    <a href="#" id="username" data-type="text" data-pk="1" data-url="/post" data-title="Enter username">superuser</a>
+                                </td>
                                 <td>Mark</td>
                                 <td>
-                                    <div class="btn-group">
-                                        <button class="btn btn-success btn-xs" type="button">Add</button>
-                                    </div>
+                                    <a data-pjax="0" aria-label="View" title="View" href="/project/view?id=1">
+                                        <span class="glyphicon glyphicon-plus-sign"></span>
+                                    </a>
+                                    <a data-pjax="0" aria-label="View" title="View" href="/project/view?id=1">
+                                        <span class="glyphicon glyphicon-minus-sign"></span>
+                                    </a>
                                 </td>
                             </tr>
                             <tr class="treegrid-2 treegrid-parent-1">
                                 <td>2</td>
                                 <td>Jacob</td>
                                 <td>
-                                    <div class="btn-group">
-                                        <button class="btn btn-info btn-xs" type="button">Update</button>
-                                    </div>
-                                    <div class="btn-group">
-                                        <button class="btn btn-danger btn-xs" type="button">Delete</button>
-                                    </div>
+                                    <a data-pjax="0" aria-label="View" title="View" href="/project/view?id=1">
+                                        <span class="glyphicon glyphicon-minus-sign"></span>
+                                    </a>
                                 </td>
                             </tr>
                             <tr class="treegrid-2-1 treegrid-parent-1">
                                 <td>2</td>
                                 <td>Jacob</td>
                                 <td>
-                                    <div class="btn-group">
-                                        <button class="btn btn-info btn-xs" type="button">Update</button>
-                                    </div>
-                                    <div class="btn-group">
-                                        <button class="btn btn-danger btn-xs" type="button">Delete</button>
-                                    </div>
+                                    <a data-pjax="0" aria-label="View" title="View" href="/project/view?id=1">
+                                        <span class="glyphicon glyphicon-minus-sign"></span>
+                                    </a>
                                 </td>
                             </tr>
                             <tr class="treegrid-3">
                                 <td>3</td>
                                 <td>Larry</td>
                                 <td>
-                                    <div class="btn-group">
-                                        <button class="btn btn-success btn-xs" type="button">Add</button>
-                                    </div>
+                                    <a data-pjax="0" aria-label="View" title="View" href="/project/view?id=1">
+                                        <span class="glyphicon glyphicon-plus-sign"></span>
+                                    </a>
+                                    <a data-pjax="0" aria-label="View" title="View" href="/project/view?id=1">
+                                        <span class="glyphicon glyphicon-minus-sign"></span>
+                                    </a>
                                 </td>
                             </tr>
                             <tr class="treegrid-4 treegrid-parent-3">
                                 <td>4</td>
                                 <td>Larry</td>
                                 <td>
-                                    <div class="btn-group">
-                                        <button class="btn btn-info btn-xs" type="button">Update</button>
-                                    </div>
-                                    <div class="btn-group">
-                                        <button class="btn btn-danger btn-xs" type="button">Delete</button>
-                                    </div>
+                                    <a data-pjax="0" aria-label="View" title="View" href="/project/view?id=1">
+                                        <span class="glyphicon glyphicon-minus-sign"></span>
+                                    </a>
                                 </td>
                             </tr>
                             </tbody>

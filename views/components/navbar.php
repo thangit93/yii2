@@ -244,6 +244,9 @@
                         <li>
                             <a href="/project/index">一覧</a>
                         </li>
+                        <li>
+                            <a href="/project/index">PMS生成</a>
+                        </li>
                     </ul>
                 </li>
                 <li>
